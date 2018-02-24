@@ -12,5 +12,19 @@
     "name": "mongodb",
     "user": "",
     "connector": "mongodb"
+  },
+  "emailDataSource": {
+    "name": "emailDataSource",
+    "connector": "mail",
+    "transports": [{
+      "type": "smtp",
+      "host": "smtp.gmail.com",
+      "secure": true,
+      "port": 465,
+      "auth": {
+        "user": "jorduno19@gmail.com",
+        "pass": "s738291f"
+      }
+    }]
   }
 }

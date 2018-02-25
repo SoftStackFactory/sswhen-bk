@@ -36,11 +36,11 @@
     "public": false
   },
   "SSUser": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": true
   },
   "results": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": true
   }
 }

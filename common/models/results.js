@@ -13,11 +13,6 @@ module.exports = function(Results) {
                 description: "Email to send results to"
 
         }, {
-                arg: "graphImage",
-                required: false,
-                type: "string",
-                description: "Base64 code of graph image"
-        }, {
                 arg: "date",
                 required: true,
                 type: "string",
@@ -26,7 +21,7 @@ module.exports = function(Results) {
             {
                 arg: "tableData",
                 required: false,
-                type: "array",
+                type: "string",
                 description: "Array of payout values to generate table"
         }],
 
@@ -39,19 +34,10 @@ module.exports = function(Results) {
         }
 
     })
-    Results.emailResults = function(email, graphImage, date, tableImage) {
+    Results.emailResults = function(email, date, tabledata) {
 
-        // Results.app.models.Email.send({
-        //     to: 'jorduno19@gmail.com',
-        //     from: 'jorduno19@gmail.com',
-        //     subject: 'SSWHEN Results',
-        //     text: 'Test Email',
-        //     html: 'my <em>html</em>'
-        // }, function(err, mail) {
-        //     console.log('email sent!');
-        //     cb(err);
-        // });
-
+        console.log(email);
+        console.log(date);
 
         var DOMAIN = 'sandbox51e960fff29c4d61ab5f46a99dfd7938.mailgun.org';
         var api_key = 'key-3134185636bcbeee7f0c041e3d2a6407';
@@ -71,8 +57,6 @@ module.exports = function(Results) {
             //   bcc: 'bar@example.com',
             subject: 'Results from ' + date + " for " + name,
             text: 'Testing some Mailgun awesomness!',
-            // 'v:my-custome-data' => "{"name": James}",
-            // 'recipient.variables': JSON.stringify(users),
             html: `<html>
                     <p> Welcome ${name}</p>
                     <div>

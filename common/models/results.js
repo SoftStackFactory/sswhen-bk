@@ -162,5 +162,3 @@ module.exports = function(Results) {
 
     }
 };
-
-};

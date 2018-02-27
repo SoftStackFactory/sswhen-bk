@@ -19,10 +19,50 @@ module.exports = function(Results) {
             type: "string",
             description: "Date of Calculations"
         }, {
-            arg: "MonthlyPayout",
-            required: false,
-            type: "array",
-            description: "Array of payout values to generate table"
+            arg: "sixtwo",
+            required: true,
+            type: "string",
+            description: "Date of Calculations"
+        }, {
+            arg: "sixthree",
+            required: true,
+            type: "string",
+            description: "Date of Calculations"
+        }, {
+            arg: "sixfour",
+            required: true,
+            type: "string",
+            description: "Date of Calculations"
+        }, {
+            arg: "sixfive",
+            required: true,
+            type: "string",
+            description: "Date of Calculations"
+        }, {
+            arg: "sixsix",
+            required: true,
+            type: "string",
+            description: "Date of Calculations"
+        }, {
+            arg: "sixseven",
+            required: true,
+            type: "string",
+            description: "Date of Calculations"
+        }, {
+            arg: "sixeight",
+            required: true,
+            type: "string",
+            description: "Date of Calculations"
+        }, {
+            arg: "sixnine",
+            required: true,
+            type: "string",
+            description: "Date of Calculations"
+        }, {
+            arg: "sevenzero",
+            required: true,
+            type: "string",
+            description: "Date of Calculations"
         }],
 
 
@@ -35,12 +75,11 @@ module.exports = function(Results) {
 
     })
 
-    Results.emailResults = function(email, date, monthlyPayout) {
+    Results.emailResults = function(email, date, sixtwo, sixthree, sixfour, sixfive, sixsix, sixseven, sixeight, sixnine, sevenzero) {
 
         var DOMAIN = 'sandbox51e960fff29c4d61ab5f46a99dfd7938.mailgun.org';
         var api_key = 'key-3134185636bcbeee7f0c041e3d2a6407';
         var mailgun = require('mailgun-js')({ apiKey: api_key, domain: DOMAIN });
-        console.log(monthlyPayout);
         var data = {
             from: 'James Orduno <jorduno19@gmail.com>',
             to: email,
@@ -92,7 +131,7 @@ module.exports = function(Results) {
                         																	62
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${monthlyPayout}
+                        																	${sixtwo}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -100,7 +139,7 @@ module.exports = function(Results) {
                         																	63
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${monthlyPayout}
+                        																	${sixthree}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -108,7 +147,7 @@ module.exports = function(Results) {
                         																	64
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																    ${monthlyPayout}
+                        																    ${sixfour}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -116,7 +155,7 @@ module.exports = function(Results) {
                         																	65
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${monthlyPayout}
+                        																	${sixfive}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -124,7 +163,7 @@ module.exports = function(Results) {
                         																	66
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																${monthlyPayout}
+                        																${sixsix}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -132,7 +171,7 @@ module.exports = function(Results) {
                         																	67
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${monthlyPayout}
+                        																	${sixseven}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -140,7 +179,7 @@ module.exports = function(Results) {
                         																	68
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${monthlyPayout}
+                        																	${sixeight}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -148,7 +187,7 @@ module.exports = function(Results) {
                         																	69
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																${monthlyPayout}
+                        																${sixnine}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -156,7 +195,7 @@ module.exports = function(Results) {
                         																	70
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																${monthlyPayout}
+                        																${sevenzero}
                         																</td>
                         															</tr>
                         														</table>

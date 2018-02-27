@@ -21,47 +21,47 @@ module.exports = function(Results) {
         }, {
             arg: "sixtwo",
             required: true,
-            type: "string",
+            type: "number",
             description: "Date of Calculations"
         }, {
             arg: "sixthree",
             required: true,
-            type: "string",
+            type: "number",
             description: "Date of Calculations"
         }, {
             arg: "sixfour",
             required: true,
-            type: "string",
+            type: "number",
             description: "Date of Calculations"
         }, {
             arg: "sixfive",
             required: true,
-            type: "string",
+            type: "number",
             description: "Date of Calculations"
         }, {
             arg: "sixsix",
             required: true,
-            type: "string",
+            type: "number",
             description: "Date of Calculations"
         }, {
             arg: "sixseven",
             required: true,
-            type: "string",
+            type: "number",
             description: "Date of Calculations"
         }, {
             arg: "sixeight",
             required: true,
-            type: "string",
+            type: "number",
             description: "Date of Calculations"
         }, {
             arg: "sixnine",
             required: true,
-            type: "string",
+            type: "number",
             description: "Date of Calculations"
         }, {
             arg: "sevenzero",
             required: true,
-            type: "string",
+            type: "number",
             description: "Date of Calculations"
         }],
 
@@ -248,17 +248,97 @@ module.exports = function(Results) {
                 type: "string",
                 description: "Date of Calculations"
         }, {
-                arg: "MonthlyPayout",
-                required: false,
-                type: "string",
-                description: "Array of monthly payout values to generate table"
-        },
-            {
-                arg: "CumlativePayout",
-                required: false,
-                type: "string",
-                description: "Array of cumulative payout values to generate table"
-        }],
+                arg: "sixtwo",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "sixthree",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "sixfour",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "sixfive",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "sixsix",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "sixseven",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "sixeight",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "sixnine",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "sevenzero",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "Csixtwo",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "Csixthree",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "Csixfour",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "Csixfive",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "Csixsix",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "Csixseven",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "Csixeight",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "Csixnine",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }, {
+                arg: "Csevenzero",
+                required: true,
+                type: "number",
+                description: "Date of Calculations"
+        }
+        ],
 
 
         notes: "Some Note",
@@ -269,14 +349,12 @@ module.exports = function(Results) {
         }
 
     })
-    Results.emailResultsDashboard = function(email, date, tabledata) {
+    Results.emailResultsDashboard = function(email, date, sixtwo, sixthree, sixfour, sixfive, sixsix, sixseven, sixeight, sixnine, sevenzero, Csixtwo, Csixthree, Csixfour, Csixfive, Csixsix, Csixseven, Csixeight, Csixnine, Csevenzero) {
 
         var DOMAIN = 'sandbox51e960fff29c4d61ab5f46a99dfd7938.mailgun.org';
         var api_key = 'key-3134185636bcbeee7f0c041e3d2a6407';
         var mailgun = require('mailgun-js')({ apiKey: api_key, domain: DOMAIN });
 
-        var tableData = [1245, 3452, 7688, 8832, 1672, 1837, 4151, 1551, 5151];
-        var tableDataCumlative = [1245, 3452, 7688, 8832, 1672, 1837, 4151, 1551, 5151];
         var data = {
             from: 'James Orduno <jorduno19@gmail.com>',
             to: email,
@@ -339,10 +417,10 @@ module.exports = function(Results) {
                         																	62
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableData[0]}
+                        																	${sixtwo}
                         																</td>
                                                         <td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableDataCumlative[0]}
+                        																	${Csixtwo}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -350,10 +428,10 @@ module.exports = function(Results) {
                         																	63
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableData[1]}
+                        																	${sixthree}
                         																</td>
                                                         <td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableDataCumlative[1]}
+                        																	${Csixthree}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -361,10 +439,10 @@ module.exports = function(Results) {
                         																	64
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableData[2]}
+                        																	${sixfour}
                         																</td>
                                                         <td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableDataCumlative[2]}
+                        																	${Csixfour}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -372,10 +450,10 @@ module.exports = function(Results) {
                         																	65
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableData[3]}
+                        																	${sixfive}
                         																</td>
                                                         <td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableDataCumlative[3]}
+                        																	${Csixfive}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -383,10 +461,10 @@ module.exports = function(Results) {
                         																	66
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																    ${tableData[4]}
+                        																    ${sixsix}
                         																</td>
                                                         <td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableDataCumlative[4]}
+                        																	${Csixsix}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -394,10 +472,10 @@ module.exports = function(Results) {
                         																	67
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableData[5]}
+                        																	${sixseven}
                         																</td>
                                                         <td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableDataCumlative[5]}
+                        																	${Csixseven}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -405,10 +483,10 @@ module.exports = function(Results) {
                         																	68
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableData[6]}
+                        																	${sixeight}
                         																</td>
                                                         <td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableDataCumlative[6]}
+                        																	${Csixeight}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -416,10 +494,10 @@ module.exports = function(Results) {
                         																	69
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableData[7]}
+                        																	${sixnine}
                         																</td>
                                                         <td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableDataCumlative[7]}
+                        																	${Csixnine}
                         																</td>
                         															</tr>
                                                       <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -427,10 +505,10 @@ module.exports = function(Results) {
                         																	70
                         																</td>
                         																<td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableData[8]}
+                        																	${sevenzero}
                         																</td>
                                                         <td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 5px 0; border: 1px solid black;" valign="top">
-                        																	${tableDataCumlative[8]}
+                        																	${Csevenzero}
                         																</td>
                         															</tr>
                         														</table>

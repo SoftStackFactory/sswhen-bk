@@ -42,5 +42,8 @@
   "results": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "Email": {
+    "dataSource": "emailDataSource"
   }
 }

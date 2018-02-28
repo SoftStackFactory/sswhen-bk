@@ -155,7 +155,9 @@ module.exports = function(Results) {
             retYears: retirementYears,
             monthly: monthlyArray,
             cumulative: cumulativeArray,
-            pv: pvOfBenefit
+            pv: pvOfBenefit,
+            lifeExpectancy: lifeExpect,
+            FRA: fullRetAge
         }
 
         callback(null, benefitData);

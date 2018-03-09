@@ -4,8 +4,14 @@
     "connector": "memory"
   },
   "mongodb": {
+    "host": "ds153113.mlab.com",
+    "port": 53113,
     "url": "mongodb://heroku_1rt6x0j6:dhp96kgfv5qsvh3tbtkd36pq0r@ds153113.mlab.com:53113/heroku_1rt6x0j6",
-    "connector": "loopback-connector-mongodb"
+    "database": "heroku_1rt6x0j6",
+    "password": "dhp96kgfv5qsvh3tbtkd36pq0r",
+    "name": "mongodb",
+    "user": "heroku_1rt6x0j6",
+    "connector": "mongodb"
   },
   "emailDataSource": {
     "name": "emailDataSource",
@@ -23,4 +29,14 @@
       }
     ]
   },
+  "herokuMongoLab": {
+    "host": "",
+    "port": 0,
+    "url": "mongodb://heroku_1rt6x0j6:dhp96kgfv5qsvh3tbtkd36pq0r@ds153113.mlab.com:53113/heroku_1rt6x0j6",
+    "database": "",
+    "password": "",
+    "name": "herokuMongoLab",
+    "user": "",
+    "connector": "mongodb"
+  }
 }

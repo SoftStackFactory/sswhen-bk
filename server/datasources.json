@@ -4,14 +4,8 @@
     "connector": "memory"
   },
   "mongodb": {
-    "host": "",
-    "port": 0,
     "url": "mongodb://heroku_1rt6x0j6:dhp96kgfv5qsvh3tbtkd36pq0r@ds153113.mlab.com:53113/heroku_1rt6x0j6",
-    "database": "",
-    "password": "",
-    "name": "mongodb",
-    "user": "",
-    "connector": "mongodb"
+    "connector": "loopback-connector-mongodb"
   },
   "emailDataSource": {
     "name": "emailDataSource",
@@ -29,14 +23,4 @@
       }
     ]
   },
-  "herokuMongoLab": {
-    "host": "",
-    "port": 0,
-    "url": "mongodb://heroku_1rt6x0j6:dhp96kgfv5qsvh3tbtkd36pq0r@ds153113.mlab.com:53113/heroku_1rt6x0j6",
-    "database": "",
-    "password": "",
-    "name": "herokuMongoLab",
-    "user": "",
-    "connector": "mongodb"
-  }
 }

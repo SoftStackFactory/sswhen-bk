@@ -4,27 +4,39 @@
     "connector": "memory"
   },
   "mongodb": {
-    "host": "",
-    "port": 0,
-    "url": "",
-    "database": "",
-    "password": "",
+    "host": "ds153113.mlab.com",
+    "port": 53113,
+    "url": "mongodb://heroku_1rt6x0j6:dhp96kgfv5qsvh3tbtkd36pq0r@ds153113.mlab.com:53113/heroku_1rt6x0j6",
+    "database": "heroku_1rt6x0j6",
+    "password": "dhp96kgfv5qsvh3tbtkd36pq0r",
     "name": "mongodb",
-    "user": "",
+    "user": "heroku_1rt6x0j6",
     "connector": "mongodb"
   },
   "emailDataSource": {
     "name": "emailDataSource",
     "connector": "mail",
-    "transports": [{
-      "type": "smtp",
-      "host": "smtp.gmail.com",
-      "secure": true,
-      "port": 465,
-      "auth": {
-        "user": "jorduno19@gmail.com",
-        "pass": "s738291f"
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.gmail.com",
+        "secure": true,
+        "port": 465,
+        "auth": {
+          "user": "jorduno19@gmail.com",
+          "pass": "s738291f"
+        }
       }
-    }]
+    ]
+  },
+  "herokuMongoLab": {
+    "host": "",
+    "port": 0,
+    "url": "mongodb://heroku_1rt6x0j6:dhp96kgfv5qsvh3tbtkd36pq0r@ds153113.mlab.com:53113/heroku_1rt6x0j6",
+    "database": "",
+    "password": "",
+    "name": "herokuMongoLab",
+    "user": "",
+    "connector": "mongodb"
   }
 }

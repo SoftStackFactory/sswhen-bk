@@ -12,7 +12,7 @@
     },
     "password": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "dateOfBirth": {
       "type": "date",
